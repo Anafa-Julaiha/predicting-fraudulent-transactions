@@ -1,6 +1,6 @@
 # Predicting Fraudulent Transactions Project
 
-This project focuses on predicting fraudulent transactions in a financial dataset using machine learning techniques. A **Random Forest Classifier** is employed to identify fraudulent transactions based on historical data.
+This project focuses on predicting fraudulent transactions in a financial dataset using **machine learning techniques**. A **Random Forest Classifier** is employed to identify fraudulent transactions based on historical data.
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -10,11 +10,10 @@ This project focuses on predicting fraudulent transactions in a financial datase
 5. [Data Preprocessing](#data-preprocessing)
 6. [Model Training and Evaluation](#model-training-and-evaluation)
 7. [Results](#results)
-8. [Next Steps](#next-steps)
 
 ## Overview
 
-The primary goal of this project is to detect fraudulent transactions in a large dataset of financial transactions. We used a supervised machine learning approach, with **Random Forest** as the classification model. The model was trained on a set of features extracted from the dataset, such as transaction amount, old balance, and transaction type.
+The primary goal of this project is to detect fraudulent transactions in a large dataset of financial transactions. We used a **supervised machine learning** approach, with **Random Forest** as the classification model. The model was trained on a set of features extracted from the dataset, such as **transaction amount**, **old balance**, and **transaction type**.
 
 ## Dataset
 
@@ -36,29 +35,45 @@ To run this project, you will need to install the required dependencies. Follow 
 
 ## 4. Project Structure
 
-The project is organized as follows:
+**fraud_detection.py**: Main script for **data processing**, **model training**, and **evaluation**.  
+**Fraud.csv**: The dataset used in the project (if shared).  
+**README.md**: Project documentation.
 
-```plaintext
-fraud-detection/
-│
-├── data/
-│   ├── Fraud.csv               # The dataset used for model training and evaluation
-│   └── processed_data.csv       # Cleaned and preprocessed data
-│
-├── notebooks/
-│   ├── EDA.ipynb                # Jupyter notebook for Exploratory Data Analysis (EDA)
-│   └── Model_Training.ipynb     # Jupyter notebook for model training and evaluation
-│
-├── models/
-│   └── random_forest_model.pkl  # Trained Random Forest model
-│
-├── scripts/
-│   ├── data_preprocessing.py    # Script for data cleaning and preprocessing
-│   └── train_model.py           # Script for model training
-│
-├── requirements.txt             # Dependencies
-├── README.md                    # Project documentation
-└── fraud_detection.py           # Main script to run the full pipeline (data preprocessing, training, and evaluation)
+## 5. Data Preprocessing
+
+Before training the model, the dataset requires several **preprocessing steps**. The **data_preprocessing.py** script handles all **data cleaning** and **feature engineering** tasks.
+
+**Key Steps**:
+- **Handling Missing Values**: We checked for and imputed missing values where necessary.
+- **Removing Irrelevant Columns**: Columns like **nameOrig** and **nameDest** were dropped as they don't contribute meaningfully to predicting fraud.
+- **Feature Encoding**: The **type** column, which is categorical (e.g., CASH_OUT, PAYMENT), was **one-hot encoded** to transform it into numerical values for modeling.
+- **Feature Scaling**: Numeric features were scaled using **StandardScaler** to ensure all features have equal importance during model training.
+- **Outlier Removal**: We applied the **Interquartile Range (IQR)** method to detect and remove outliers, especially for columns like **amount** and **oldbalanceOrg**.
+
+## 6. Model Training and Evaluation
+
+### Model Selection:
+We used **Random Forest Classifier** for this project because it is well-suited for **large datasets** and provides interpretable **feature importance**.
+
+### Steps:
+- **Data Splitting**: The dataset was split into **training (70%)** and **test (30%)** sets.
+- **Model Training**:  
+  - A **Random Forest Classifier** was trained using **100 trees (estimators)**.
+  
+### Evaluation Metrics:
+- **Accuracy**: Measures how often the classifier correctly identifies fraud.
+- **ROC AUC Score**: Balances the trade-off between true positives and false positives.
+- **Confusion Matrix**: Visualizes performance with counts of **true/false positives** and **negatives**.
+
+## 7. Results
+
+The model achieved the following results:
+- **Accuracy**: [Insert Accuracy Score]
+- **ROC AUC Score**: [Insert ROC AUC Score]
+
+A **confusion matrix** and **classification report** were also generated to further evaluate the performance of the model.
+
+
 
 
 1. Clone the repository:
