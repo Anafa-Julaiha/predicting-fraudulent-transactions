@@ -33,13 +33,13 @@ The dataset consists of over **6 million** financial transactions, including var
 
 To run this project, you will need to install the required dependencies. Follow these steps:
 
-## 4. Project Structure
+## Project Structure
 
 **fraud_detection.py**: Main script for **data processing**, **model training**, and **evaluation**.  
 **Fraud.csv**: The dataset used in the project (if shared).  
 **README.md**: Project documentation.
 
-## 5. Data Preprocessing
+## Data Preprocessing
 
 Before training the model, the dataset requires several **preprocessing steps**. The **data_preprocessing.py** script handles all **data cleaning** and **feature engineering** tasks.
 
@@ -50,7 +50,7 @@ Before training the model, the dataset requires several **preprocessing steps**.
 - **Feature Scaling**: Numeric features were scaled using **StandardScaler** to ensure all features have equal importance during model training.
 - **Outlier Removal**: We applied the **Interquartile Range (IQR)** method to detect and remove outliers, especially for columns like **amount** and **oldbalanceOrg**.
 
-## 6. Model Training and Evaluation
+## Model Training and Evaluation
 
 ### Model Selection:
 We used **Random Forest Classifier** for this project because it is well-suited for **large datasets** and provides interpretable **feature importance**.
@@ -65,7 +65,7 @@ We used **Random Forest Classifier** for this project because it is well-suited 
 - **ROC AUC Score**: Balances the trade-off between true positives and false positives.
 - **Confusion Matrix**: Visualizes performance with counts of **true/false positives** and **negatives**.
 
-## 7. Results
+## Results
 
 The model achieved the following results:
 - **Accuracy**: 0.9996594701355309
