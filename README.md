@@ -68,8 +68,8 @@ We used **Random Forest Classifier** for this project because it is well-suited 
 ## 7. Results
 
 The model achieved the following results:
-- **Accuracy**: [Insert Accuracy Score]
-- **ROC AUC Score**: [Insert ROC AUC Score]
+- **Accuracy**: 0.9996594701355309
+- **ROC AUC Score**: 0.8802311189948779
 
 A **confusion matrix** and **classification report** were also generated to further evaluate the performance of the model.
 
