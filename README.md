@@ -36,5 +36,5 @@ To run this project, you will need to install the required dependencies. Follow 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/fraud-detection.git
+   git clone https://github.com/your-username/predicting-fraudulent-transactions.git
    cd fraud-detection
