@@ -1,4 +1,4 @@
-#predicting fraudulent transactions project
+#Predicting Fraudulent Transactions Project
 
 This project focuses on predicting fraudulent transactions in a financial dataset using machine learning techniques. A **Random Forest Classifier** is employed to identify fraudulent transactions based on historical data.
 
