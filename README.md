@@ -34,6 +34,33 @@ The dataset consists of over **6 million** financial transactions, including var
 
 To run this project, you will need to install the required dependencies. Follow these steps:
 
+## 4. Project Structure
+
+The project is organized as follows:
+
+```plaintext
+fraud-detection/
+│
+├── data/
+│   ├── Fraud.csv               # The dataset used for model training and evaluation
+│   └── processed_data.csv       # Cleaned and preprocessed data
+│
+├── notebooks/
+│   ├── EDA.ipynb                # Jupyter notebook for Exploratory Data Analysis (EDA)
+│   └── Model_Training.ipynb     # Jupyter notebook for model training and evaluation
+│
+├── models/
+│   └── random_forest_model.pkl  # Trained Random Forest model
+│
+├── scripts/
+│   ├── data_preprocessing.py    # Script for data cleaning and preprocessing
+│   └── train_model.py           # Script for model training
+│
+├── requirements.txt             # Dependencies
+├── README.md                    # Project documentation
+└── fraud_detection.py           # Main script to run the full pipeline (data preprocessing, training, and evaluation)
+
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/predicting-fraudulent-transactions.git
